@@ -8,7 +8,6 @@ import {
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
 
 function Menu() {
     return (
@@ -24,9 +23,9 @@ function Menu() {
                             <Nav.Link>Gift Card</Nav.Link>
                         </Nav>
                         <Nav>
-                            <Nav.Link href="#deets"><i class="bi bi-bag-fill"></i></Nav.Link>
-                            <Nav.Link href="#deets"><i class="bi bi-person-circle"></i></Nav.Link>
-                            <Nav.Link href="#deets"><i class="bi bi-search"></i></Nav.Link>
+                            <Nav.Link href="#deets"><i className="bi bi-bag-fill"></i></Nav.Link>
+                            <Nav.Link href="#deets"><i className="bi bi-person-circle"></i></Nav.Link>
+                            <Nav.Link href="#deets"><i className="bi bi-search"></i></Nav.Link>
                         </Nav>
                     </Navbar.Collapse>
                 </Container>

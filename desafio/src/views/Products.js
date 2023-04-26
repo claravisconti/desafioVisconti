@@ -38,7 +38,7 @@ function Products(props) {
                 <Container >
                     <Row Row xs={2} md={4} lg={4}>
                         {items.map(item => (
-                            <Col>
+                            <Col key={item.id}>
                                 <Tarjeta Id={item.id} Img={item.image} Titulo={item.title} Precio={item.price} />
                             </Col>
                         ))}

@@ -2,6 +2,14 @@ import { useState, useEffect } from 'react';
 import {
     useParams
 } from "react-router-dom";
+import Tarjeta from '../components/Card';
+import Banner from '../components/Banner'
+import Footer from '../components/Footer'
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+import Card from 'react-bootstrap/Card';
+import Button from 'react-bootstrap/Button';
 
 function ProductDetail() {
 
@@ -18,7 +26,6 @@ function ProductDetail() {
                 (result) => {
                     setIsLoaded(true);
                     setItem(result);
-                    console.log(result.title);
                 },
                 (error) => {
                     setIsLoaded(true);
@@ -34,10 +41,26 @@ function ProductDetail() {
     } else {
         return (
             <>
-                <img src={item.image} width={200}></img>
-                <h4>{item.title}</h4>
-                <p>{item.description}</p>
-                <p>{item.price}</p>
+                <Banner />
+                <Container className="p-5">
+                    <Row >
+                        <Col className="d-flex justify-content-center" >
+                            <img src={item.image} className="imgDetailStyle"></img>
+                        </Col>
+                        <Col className="d-flex align-items-center" >
+                            <Card className="card2">
+                                <Card.Title className="my-3">{item.title}</Card.Title>
+                                <Card.Text className="my-3">{item.description}</Card.Text>
+                                <Card.Title className="my-3">${item.price}</Card.Title>
+                                <div className="d-flex">
+                                    <Button variant="dark" className="w-75">Agregar al carrito</Button>
+                                    <Button variant="light" className="w-25"><i class="bi bi-heart-fill"></i></Button>
+                                </div>
+                            </Card>
+                        </Col>
+                    </Row>
+                </Container>
+                <Footer />
             </>
         );
     }

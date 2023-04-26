@@ -6,15 +6,25 @@ a:visited {
     text-decoration: none;
 }
 
-.card {
+.card1 {
     max-width: 18rem;
     max-height: 25rem;
     padding: 1rem;
     margin: 1rem;
-    border:none;
+    border: none;
+}
+
+.card2 {
+    padding: 1rem;
+    margin: 1rem;
+    border: none;
 }
 
 .imgStyle {
     height: 15rem;
     object-fit: contain;
+}
+
+.imgDetailStyle {
+    max-width: 20rem;
 }
