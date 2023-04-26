@@ -1,11 +1,10 @@
 import Route from './routes/Ruta';
-import Navbar from './views/Navbar';
-import Products from './views/Products';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Style from './App.css'
 
 function App() {
   return (
-    <div>
-      <Navbar/>
+    <div className='Style'>
       <Route/>
     </div>
   );

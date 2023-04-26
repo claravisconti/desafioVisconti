@@ -1,9 +1,12 @@
 import { useState, useEffect } from 'react';
-import {
-    Link
-} from "react-router-dom";
+import Banner from '../components/Banner'
+import Tarjeta from '../components/Card'
+import Footer from '../components/Footer'
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 
-function Products() {
+function Products(props) {
 
     const [error, setError] = useState(null);
     const [isLoaded, setIsLoaded] = useState(false);
@@ -30,17 +33,19 @@ function Products() {
         return <div>Loading...</div>;
     } else {
         return (
-            <ul>
-                {items.map(item => (
-                    <div key={item.id}>
-                        <Link to={`/detalle/${item.id}`}>
-                            <img src={item.image} width={200}></img>
-                        </Link>
-                        <h4>{item.title}</h4>
-                        <p>${item.price}</p>
-                    </div>
-                ))}
-            </ul>
+            <div>
+                <Banner />
+                <Container >
+                    <Row Row xs={2} md={4} lg={4}>
+                        {items.map(item => (
+                            <Col>
+                                <Tarjeta Id={item.id} Img={item.image} Titulo={item.title} Precio={item.price} />
+                            </Col>
+                        ))}
+                    </Row>
+                </Container>
+                <Footer />
+            </div>
         );
     }
 }
