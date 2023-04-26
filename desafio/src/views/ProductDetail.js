@@ -4,6 +4,7 @@ import {
 } from "react-router-dom";
 import Tarjeta from '../components/Card';
 import Banner from '../components/Banner'
+import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
@@ -48,6 +49,7 @@ function ProductDetail() {
     } else {
         return (
             <>
+                <Navbar />
                 <Banner />
                 <Container className="p-5">
                     <Row >

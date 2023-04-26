@@ -6,13 +6,11 @@ import {
 } from "react-router-dom";
 import Products from "../views/Products";
 import ProductDetail from "../views/ProductDetail";
-import Navbar from "../components/Navbar";
 
 function Ruta() {
     return (
         <>
             <Router>
-                <Navbar />
                 <Routes>
                     <Route exact path="/" element={<Products />} />
                     <Route exact path="detalle/:idProd" element={<ProductDetail />} />

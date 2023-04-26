@@ -6,6 +6,7 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Spinner from 'react-bootstrap/Spinner';
+import Navbar from '../components/Navbar'
 
 function Products(props) {
 
@@ -40,6 +41,7 @@ function Products(props) {
     } else {
         return (
             <div>
+                <Navbar />
                 <Banner />
                 <Container >
                     <Row Row xs={2} md={4} lg={4}>
